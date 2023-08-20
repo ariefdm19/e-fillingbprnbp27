@@ -8,6 +8,8 @@
         <div class="sidebar-brand-text mx-3">E-Filling</div>
     </a>
 
+
+
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
 
@@ -80,6 +82,22 @@
             <span>Berkas Angunan</span></a>
     </li>
 
+    <?php if (in_groups('admin')) : ?>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+        <!-- Heading -->
+
+        <div class="sidebar-heading">
+            Pengaturan Pengguna
+        </div>
+
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('admin'); ?>">
+                <i class="fas fa-user"></i>
+                <span>Daftar Pengguna</span></a>
+        </li>
+    <?php endif; ?>
+
     <!-- Divider -->
     <hr class="sidebar-divider">
 
@@ -90,16 +108,12 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="<?php base_url('user'); ?>">
             <i class="fas fa-user"></i>
             <span>My Profil</span></a>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-            <i class="fas fa-user"></i>
-            <span>Ubah Profil</span></a>
-    </li>
+
 
     <!-- Divider -->
     <hr class="sidebar-divider">
@@ -108,6 +122,8 @@
             <i class="fas fa-sign-out-alt"></i>
             <span>Logout</span></a>
     </li>
+
+
 
 
     <!-- Divider -->
